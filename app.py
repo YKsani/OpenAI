@@ -4,8 +4,8 @@ import os
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
-bot = telebot.TeleBot(os.getenv('API_TOKEN'))
-openai.api_key = os.getenv('openai.api_key')
+bot = telebot.TeleBot(os.getenv('token'))
+openai.api_key = os.getenv('openai')
 
 @bot.message_handler(func=lambda _: True)
 def handle_message(message):
